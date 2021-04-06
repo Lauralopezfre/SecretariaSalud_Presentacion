@@ -36,7 +36,7 @@ public class Galeria {
     }
     
     /* devuelve la foto original, pero si el tamaño es mayor al contenedor, lo redimensiona */
-   public Icon getFoto(int num, Dimension d){
+   public ImageIcon getFoto(int num, Dimension d){
         if( num>=0 & num<fotos.size() )
         {
             //si la foto es mas grande que el contendor -> redimensionar
