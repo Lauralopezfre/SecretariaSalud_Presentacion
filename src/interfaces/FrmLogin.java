@@ -5,6 +5,8 @@
  */
 package interfaces;
 
+import TextPrompt.TextPrompt;
+
 /**
  *
  * @author laura
@@ -16,6 +18,7 @@ public class FrmLogin extends javax.swing.JFrame {
      */
     public FrmLogin() {
         initComponents();
+        mensajeCamposTexto();
     }
 
     /**
@@ -172,7 +175,9 @@ public class FrmLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_txtContraseniaActionPerformed
 
     private void btnAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarActionPerformed
-        // TODO add your handling code here:
+        FrmInicio frameInicio = new FrmInicio();
+        frameInicio.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btnAceptarActionPerformed
 
     /**
@@ -208,6 +213,13 @@ public class FrmLogin extends javax.swing.JFrame {
                 new FrmLogin().setVisible(true);
             }
         });
+    }
+    
+    public void mensajeCamposTexto(){
+        //Correo electronico
+        TextPrompt correo = new TextPrompt("Ingrese su usuario", txtUsuario);
+        //Contraseña
+        TextPrompt contrasenia = new TextPrompt("Ingrese su contraseña", txtContrasenia);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

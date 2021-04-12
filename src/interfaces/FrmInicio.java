@@ -36,7 +36,7 @@ public class FrmInicio extends javax.swing.JFrame {
         lblNomCodigoCita = new javax.swing.JLabel();
         lblFechaHora = new javax.swing.JLabel();
         lblNombrePaciente1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btnConsultarExpediente = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         lblNombreMedico = new javax.swing.JLabel();
@@ -85,13 +85,13 @@ public class FrmInicio extends javax.swing.JFrame {
         lblNombrePaciente1.setText("Lunes, 13 Feb 2021");
         lblNombrePaciente1.setToolTipText("");
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setFont(new java.awt.Font("Calibri Light", 0, 14)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnConsultarExpediente.png"))); // NOI18N
-        jButton1.setText("Consultar Expediente");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnConsultarExpediente.setBackground(new java.awt.Color(255, 255, 255));
+        btnConsultarExpediente.setFont(new java.awt.Font("Calibri Light", 0, 14)); // NOI18N
+        btnConsultarExpediente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnConsultarExpediente.png"))); // NOI18N
+        btnConsultarExpediente.setText("Consultar Expediente");
+        btnConsultarExpediente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnConsultarExpedienteActionPerformed(evt);
             }
         });
 
@@ -119,7 +119,7 @@ public class FrmInicio extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addComponent(jButton1)
+                .addComponent(btnConsultarExpediente)
                 .addContainerGap(18, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -140,7 +140,7 @@ public class FrmInicio extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(lblNombrePaciente1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31)
-                .addComponent(jButton1)
+                .addComponent(btnConsultarExpediente)
                 .addGap(31, 31, 31))
         );
 
@@ -193,6 +193,11 @@ public class FrmInicio extends javax.swing.JFrame {
         btnSalir.setFont(new java.awt.Font("Calibri Light", 0, 14)); // NOI18N
         btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnSalir.png"))); // NOI18N
         btnSalir.setText("Salir");
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalirActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -295,53 +300,27 @@ public class FrmInicio extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void btnConsultarExpedienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultarExpedienteActionPerformed
+        FrmAcceso frameAcceso = new FrmAcceso();
+        frameAcceso.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnConsultarExpedienteActionPerformed
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnBuscarActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmInicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmInicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmInicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmInicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
+        FrmLogin frameLogin = new FrmLogin();
+        frameLogin.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnSalirActionPerformed
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new FrmInicio().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBuscar;
+    private javax.swing.JButton btnConsultarExpediente;
     private javax.swing.JButton btnSalir;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
